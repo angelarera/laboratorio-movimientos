@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.error {
+  color: var(--error-color);
+  font-size: 0.9em;
+}
+
+.input-error {
+  box-shadow: unset;
+  border: 2px solid var(--error-color);
+}
+
+.btn-enviar {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 800px) {
+  .btn-enviar-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-enviar {
+    width: 25%;
+  }
+}
