@@ -5,7 +5,7 @@ import { MovementListItemComponent } from "./movement-list-item.component";
 import { MovementListAccountInfo } from "./movement-list-account-info.component";
 
 interface Props {
-  accountDetails: AccountVm | null;
+  accountDetails: AccountVm;
   movementList: MovementVm[];
 }
 
@@ -14,9 +14,7 @@ export const MovementListTableComponent: React.FC<Props> = (props) => {
 
   return (
     <>
-      {accountDetails && (
-        <MovementListAccountInfo accountDetails={accountDetails} />
-      )}
+      <MovementListAccountInfo accountDetails={accountDetails} />
 
       <div className={classes.gridContainer}>
         <div className={classes.gridTable}>

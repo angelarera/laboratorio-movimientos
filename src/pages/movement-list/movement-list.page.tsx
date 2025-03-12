@@ -11,9 +11,11 @@ import {
 import { useParams } from "react-router-dom";
 
 export const MovementListPage: React.FC = () => {
-  const [accountDetails, setAccountDetails] = React.useState<AccountVm | null>(
-    null
-  );
+  const [accountDetails, setAccountDetails] = React.useState<AccountVm>({
+    iban: "",
+    name: "",
+    balance: "",
+  });
   const { id } = useParams<{ id: string }>();
   const [movementList, setMovementList] = React.useState<MovementVm[]>([]);
 
